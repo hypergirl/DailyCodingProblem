@@ -4,13 +4,13 @@
 #For example, given [10, 15, 3, 7] and k of 17, 
 #return true since 10 + 7 is 17.
 
-arr=[10]
-k=17
-a=False
-if(len(arr)>=2):
-    for i in range(len(arr)):
-        for j in range(i+1,len(arr)):
-            if(arr[i]+arr[j]==k):
-                a=True
-                break;
+def twoSum(nums, target):
+    for i in range(len(nums)):
+        
+        out=target-nums[i]
+            
+        if(out in nums[i+1:]):
+            return [i,nums.index(out,i+1)]
+        
+a=twoSum([3,4,1,2],7)
 print(a)
